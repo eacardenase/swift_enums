@@ -133,7 +133,9 @@ enum ShapeDimensions {
     case point
     case square(side: Double)
     case rectangle(width: Double, height: Double)
-    
+}
+
+extension ShapeDimensions {
     func area() -> Double {
         switch self {
         case .point:
