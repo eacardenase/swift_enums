@@ -68,7 +68,7 @@ if let myAlignment {
 //    case python = "python"
 //}
 
-enum ProgrammingLanguage: String {
+enum ProgrammingLanguage: String, CaseIterable {
     case swift
     case objectiveC = "objective-c"
     case c
@@ -77,6 +77,9 @@ enum ProgrammingLanguage: String {
     case ruby
     case python
 }
+
+let programmingLanguages = ProgrammingLanguage.allCases.map(\.rawValue)
+print(programmingLanguages)
 
 let myFavoriteLanguage: ProgrammingLanguage = .swift
 print("My favorite programming language is \(myFavoriteLanguage)") // My favorite programming language is swift
